@@ -40,7 +40,7 @@ var chart = Highcharts.chart('chart-container', { // Build the chart.
             name: 'Evil',
             y: 1
         }, {
-            name: 'Just love heroes',
+            name: 'Neither :)',
             y: 1
         }]
     }]
