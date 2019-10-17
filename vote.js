@@ -7,7 +7,7 @@ var chart = Highcharts.chart('chart-container', { // Build the chart.
         type: 'pie'
     },
     title: {
-        text: 'What\'s your favorite ice cream?'
+        text: 'What\'s your favorite type of Superhero?'
     },
     tooltip: {
         pointFormat: '<b>{point.percentage:.1f}% - {point.y} Vote(s)</b>'
@@ -34,13 +34,13 @@ var chart = Highcharts.chart('chart-container', { // Build the chart.
         name: 'Flavors',
         colorByPoint: true,
         data: [{
-            name: 'Chocolate',
+            name: 'Good',
             y: 1
         }, {
-            name: 'Vanilla',
+            name: 'Evil',
             y: 1
         }, {
-            name: 'Strawberry',
+            name: 'Just love heroes',
             y: 1
         }]
     }]
@@ -49,8 +49,8 @@ var chart = Highcharts.chart('chart-container', { // Build the chart.
 var voteChannel = "ice_cream_flavor_votes"; // Channel for counting votes.
 
 pubnub = new PubNub({ // Your PubNub keys here. Get them from https://dashboard.pubnub.com.
-  publishKey : 'demo',
-  subscribeKey : 'demo'
+  publishKey : 'pub-c-d5e6d9df-24a6-4951-abfa-dbd6aabfdcee',
+  subscribeKey : 'sub-c-d760e400-f0c0-11e9-ad72-8e6732c0d56b'
 });
 
 function publishVote(flavor) { // Publish a vote with PubNub.
